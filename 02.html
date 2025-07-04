@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>라디오 버튼을 클릭하면 value 값을 이용해 해당 사이트로 이동 </h2>
+
+    <p>(location.href 이용)</p>
+
+    <div class="url">
+    <label><input type="radio" name="url" value="https://www.naver.com">네이버</label><br>
+    <label><input type="radio" name="url" value="https://www.google.com">구글</label><br>
+    <label><input type="radio" name="url" value="https://www.w3schools.com/">w3schools</label>
+    </div>
+
+    <script>
+        function showSeletedUrl () {
+            const radio = document.getElementById('url');
+            let selectedValue = null;
+        }
+
+        for (let radio of radio) {
+            if (radio.checked) {
+                selectedValue= radio.value;
+                break;
+            }
+        }
+
+        if (selectedValue) {
+            window.location.href = selectedValue;
+        } 
+
+
+    </script>
+
+    
+
+</body>
+</html>

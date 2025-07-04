@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>01.</h1>
+
+    <h3>settimer</h3>
+
+    <pre>
+        두번째 인수로 전달받은 시간(ms, 1/100초)으로 단 한번 동작하는 타이머를 생성함
+    </pre>
+
+    <script>
+        setTimeout(() => {
+           //console.log('3초가 지났나?') ;
+        }, 3000);
+
+        setTimeout((msg) => {
+          // console.log(`1...2...3...{msg}`) ;
+        }, 3000, '메세지입니다!');
+    </script>
+
+    <h3>clearTimeout</h3>
+
+    <script>
+        const timerId = setTimeout(() => console.log('실행되니?)', 2000));
+    
+        console.log(timerId);
+        clearTimeout(timerId);
+    </script>
+</body>
+</html>
